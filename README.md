@@ -14,8 +14,8 @@ This project is a basic skincare e-commerce website created to practice front-en
 
 ## Project Documentation
 
-* [Project Slides](docs/Slides.pdf)
-* [Project Report](docs/Report.pdf)
+* [Project Slides](Project_Presentation.pdf)
+* [Project Report](Project_Report.pdf)
 
 ## Features
 
