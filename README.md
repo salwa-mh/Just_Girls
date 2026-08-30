@@ -1,4 +1,4 @@
-# Just_Girls# Skincare Store
+# Just_Girls #Skincare Store
 
 A simple front-end skincare store website developed as part of web development training using **HTML, CSS, and JavaScript**.
 
