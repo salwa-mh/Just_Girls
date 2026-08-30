@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard </title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+  <style>
+    
+    body {             
+         margin: 0;
+        font-family: 'Nunito', sans-serif;
+        background: url('CSS/background.jpg');
+        background-position: center;
+        background-size: contain;
+        min-height: 100vh;
+        
+    
+    }
+    .logo {
+    display: flex;
+    align-items: center; /* يخلي النص والصورة في نفس الخط رأسيًا */
+}
+
+.logo-img {
+    width: auto; /* حجم الصورة */
+    height: 30px;
+    margin-right: 10px; /* مسافة بين الصورة والاسم */
+    filter: brightness(0) invert(1);
+    
+}
+
+.logo-text {
+    font-family: 'Oooh Baby', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.navbar {
+    background-color: rgb(248, 2, 166); /* وردي باستيل شفاف */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 15px; /* الحواف الدائرية */
+    margin: 10px; /* تبعد عن حافة الصفحة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ظل خفيف */
+    backdrop-filter: blur(8px); /* إحساس زجاجي */
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #fff0f5; /* وردي فاتح */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px; /* حواف ناعمة للرابط */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 228, 225, 0.5); 
+    color: white;
+}
+
+.footer {
+    background-color: rgba(250, 7, 169, 0.761); /* نفس لون الـ navbar */
+    color: #fff0f5;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: calc(100% - 20px); /* نفس المارجن بتاع الـ navbar */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+    .admin-container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+     background-color:#FFF4F7;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+    text-align: center;
+        padding: 20px;
+        font-family: 'Oooh Baby', cursive;
+        font-size: 48px;
+        color: #6E001C;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+    }
+    
+    
+    form {
+        
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #E78CA3;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #FF69B4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #E78CA3;
+    }
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .product-card {
+      background-color: #FFB6C9;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #6E001C;
+    }
+    .product-card button {
+      margin: 5px;
+    }
+    .delete-btn {
+      background-color: #6E001C;
+    }
+    
+    .delete-btn:hover {
+      background-color: #901c39;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-store"></i>
+
+    <!-- logo  -->
+    <div class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <span class="logo-text">JUST GIRLS</span>
+
+    </div>
+
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li id="adminLink" ><a href="admin.html">Admin</a></li>
+            <li><a href="logout.html">Log out</a></li>
+        
+        </ul>
+    </nav>
+
+<div class="admin-container">
+    
+    <h1> Admin Dashboard </h1>
+
+    
+    <form id="productForm">
+        <input type="text" id="name" placeholder=" product name" required>
+        <input type="number" id="price" placeholder="price" required>
+        <input type="text" id="description"placeholder="description">
+        <input type="text" id="image" placeholder="URL  ">
+        <button type="submit">ADD PRODUCT</button>
+    </form>
+
+    
+     
+    <div class="products-list" id="productsList"></div>
+</div>
+<!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 JUST GIRLS. All rights reserved.</p>
+    </footer>
+
+<script>
+  
+  let products = [];
+  let editIndex = null;
+  const form = document.getElementById("productForm");
+  const productsList = document.getElementById("productsList");
+
+  function displayProducts() {
+      productsList.innerHTML = "";
+      products.forEach((product, index) => {
+          productsList.innerHTML += `
+          <div class="product-card">
+              <img src="${product.image || 'https://via.placeholder.com/200'}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>Price: ${product.price}EGP </p>
+              <p>${product.description}</p>
+              <button onclick="editProduct(${index})">Edit</button>
+              <button class="delete-btn" onclick="deleteProduct(${index})">Delete</button>
+          </div>
+          `;
+      });
+  }
+
+  form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const price = document.getElementById("price").value;
+      const description = document.getElementById("description").value;
+      let image = document.getElementById("image").value;
+
+      if (!image) {
+          image = "https://via.placeholder.com/200";  
+      }
+
+      const newProduct = { name, price, description, image };
+
+      if (editIndex === null) {
+          products.push(newProduct);
+      } else {
+          products[editIndex] = newProduct;
+          editIndex = null;
+      }
+      form.reset();
+      displayProducts();
+  });
+
+  function editProduct(index) {
+      const product = products[index];
+      document.getElementById("name").value = product.name;
+      document.getElementById("price").value = product.price;
+      document.getElementById("description").value = product.description;
+      document.getElementById("image").value = product.image;
+      editIndex = index;
+  }
+
+  
+  
+   
+  
+  displayProducts();
+</script>
+
+</body>
+</html>

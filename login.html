@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Girls Login</title>
+  
+  <link rel="stylesheet" href="CSS/login.css">
+  <script src="javascript/login.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Welcome to <span>JUST GIRLS</span></h2>
+    <p class="subtitle">Login to continue to our world</p>
+    <form id="loginForm" onsubmit="checkLogin(event)">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p class="extra-links"><a href="#" id="forgotPassword">Forgot Password?</a></p>
+    <p class="extra-links">Don’t have an account? <a href="Sign_Up.html">Sign Up</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>JUST GIRLS Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet"/> <!--Nunito Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet"/> <!--Oooh Baby Font-->
+  <link rel="stylesheet" href="CSS/signup.css"/>
+  <script src="javascript/signup.js" ></script>
+</head>
+<body id="sign-up-body">
+  <main id="sign-up-main">
+    <section id="sign-up-form"> <!--Header >> Form elements >> Footer-->
+      <header>
+        <h1 id="header">Welcome to <span id="logo">JUST GIRLS</span></h1>
+        <p id="sub-header">Join our planet first to access our services</p>
+      </header>
+      <form>
+        <input type="text" id="username" name="registration-fields" placeholder="Username">
+        <input type="password" id="password" name="registration-fields" placeholder="Password">
+        <button type="button" id="sign-up" onclick="sign_up()">Sign Up</button>
+      </form>
+      <footer>
+        <p id="note">You already have an account ? <b><a href="login.html" id="log-in-redirect">Sign In</a></b></p><!--Change link later to Sign-In Page.-->
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

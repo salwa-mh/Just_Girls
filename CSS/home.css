@@ -1,0 +1,141 @@
+body {
+      background-image: url("background.jpg"); 
+      background-size: cover; 
+      background-attachment: fixed; 
+      background-repeat: no-repeat;
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+    display: flex;
+    align-items: center; /* يخلي النص والصورة في نفس الخط رأسيًا */
+}
+
+.logo-img {
+    width: auto; /* حجم الصورة */
+    height: 30px;
+    margin-right: 10px; /* مسافة بين الصورة والاسم */
+    filter: brightness(0) invert(1);
+    
+}
+
+.logo-text {
+    font-family: 'Oooh Baby', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.navbar {
+    background-color: rgb(248, 2, 166); /* وردي باستيل شفاف */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 15px; /* الحواف الدائرية */
+    margin: 10px; /* تبعد عن حافة الصفحة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ظل خفيف */
+    backdrop-filter: blur(8px); /* إحساس زجاجي */
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #fff0f5; /* وردي فاتح */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px; /* حواف ناعمة للرابط */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 228, 225, 0.5); 
+    color: white;
+}
+
+.footer {
+    background-color: rgba(250, 7, 169, 0.761); /* نفس لون الـ navbar */
+    color: #fff0f5;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: calc(100% - 20px); /* نفس المارجن بتاع الـ navbar */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+strong {
+      font-family: 'Nunito', sans-serif;
+      font-size: 30px;
+      color: #6E001C;
+    }
+    em {
+      font-family: 'Oooh Baby';
+      font-size: 60px;
+      color: hotpink;
+    }
+    p {
+      font-size: 13px;
+      color: #555;
+    }
+
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .slides {
+      display: flex;
+      width: calc(100% * 14); 
+      animation: slide;
+      animation-iteration-count: infinite;
+      animation-duration: 25s;
+    }
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .about-us {
+  background-color: rgba(255, 182, 193, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #808080;
+}
+.about-us h2 {
+   font-family: 'Nunito';
+  color:#6E001C;
+  text-decoration: underline;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.about-us p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}

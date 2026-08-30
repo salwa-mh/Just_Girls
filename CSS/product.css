@@ -1,0 +1,183 @@
+
+  .logo-text {
+    font-family: 'Oooh Baby', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.navbar {
+    background-color: rgb(248, 2, 166); /* وردي باستيل شفاف */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 15px; /* الحواف الدائرية */
+    margin: 10px; /* تبعد عن حافة الصفحة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ظل خفيف */
+    backdrop-filter: blur(8px); /* إحساس زجاجي */
+    
+}
+.logo-img {
+    width: auto; /* حجم الصورة */
+    height: 30px;
+    margin-right: 10px; /* مسافة بين الصورة والاسم */
+    filter: brightness(0) invert(1);
+    
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #fff0f5; /* وردي فاتح */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px; /* حواف ناعمة للرابط */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 228, 225, 0.5); 
+    color: white;
+}
+
+.footer {
+    background-color: rgba(250, 7, 169, 0.761); /* نفس لون الـ navbar */
+    color: #fff0f5;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: calc(100% - 20px); /* نفس المارجن بتاع الـ navbar */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+h1,h2,h3{
+    text-align: center;
+    font-family: Oooh Baby;
+    font-size: 50px;
+    color: #FF69B4;
+    margin-top: 30px;
+    font-weight: bold;
+    text-shadow: 3px 2px gray;
+  }
+  .logo {
+    display: flex;
+    align-items: center; /* يخلي النص والصورة في نفس الخط رأسيًا */
+}
+
+
+
+
+img{
+    float:right;
+    width: 200px;
+    height: 250px;
+    border: 5px solid #E78CA3;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+    margin: 20px;
+}
+
+
+.leftfloat {
+  display: flex;           
+  align-items: center;     
+  gap: 20px;               
+}
+.rightfloat{
+  display: flex;           
+  align-items: center;     
+  gap: 20px;  
+  justify-content: flex-end; /*to the right*/
+}
+.text{
+    font-family: Nunito;
+    color: #6E001C;
+    font-size: 18px;
+    line-height: 1.6; 
+    width: 300px;
+}
+.text2{
+  color:#FF69B4;
+  border: 2px solid #E78CA3;
+  padding: 10px 15px; /*space in the box*/
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  width: fit-content;   
+  margin-top: 10px;
+}
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 50px;
+  border: 2px solid #E78CA3;
+  padding: 5px 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: fit-content;
+}
+.counter_2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 900px;
+  border: 2px solid #E78CA3;
+  padding: 5px 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: fit-content;
+}
+
+.counter button {
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border: none; /*none frame*/
+  border-radius: 5px;
+  cursor: pointer; /*change pointer*/
+  background-color: #E78CA3;
+  color: white;
+}
+
+.counter span {/*the number*/
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}
+.counter_2 button {
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border: none; /*none frame*/
+  border-radius: 5px;
+  cursor: pointer; /*change pointer*/
+  background-color: #E78CA3;
+  color: white;
+}
+
+.counter_2 span {/*the number*/
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}
